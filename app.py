@@ -5,6 +5,7 @@ from resources.UserResource import UserLogin, UserRegistration, LogoutAccessToke
 from flask_sqlalchemy import SQLAlchemy
 from flask_jwt_extended import JWTManager
 from models.user import RevokedTokenModel
+from resources.EmployeeResource import Employee, EmployeeAll
 
 
 app = Flask(__name__)
@@ -36,6 +37,8 @@ api.add_resource(LogoutRefreshToken,'/RTlogout')
 api.add_resource(TokenRefresh,'/refreshToken')
 api.add_resource(AllUsers,'/allusers')
 api.add_resource(SecretResource,'/SecretResource')
+api.add_resource(Employee,'/employee/<string:id>')
+api.add_resource(EmployeeAll,'/allEmployee')
 
 
 if __name__ =="__main__":
