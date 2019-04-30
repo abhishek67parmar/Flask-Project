@@ -85,3 +85,13 @@ class TokenRefresh(Resource):
 class AllUsers(Resource):
     def get(self):
         return UserModel.return_all()
+
+
+
+
+class SecretResource(Resource):
+    @jwt_required
+    def get(self):
+        return {
+            'answer': 42
+        }
