@@ -33,4 +33,4 @@ class EmployeeModel(db.Model):
 
     @classmethod
     def allEmployee(cls):
-return {'Employees':list(map(lambda x:{'emp_id':x.emp_id, 'emp_name':x.emp_name, 'city':x.city}, cls.query.all()))}
+        return {'Employees':list(map(lambda x:{'emp_id':x.emp_id, 'emp_name':x.emp_name, 'city':x.city}, cls.query.all()))}

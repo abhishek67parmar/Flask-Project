@@ -58,4 +58,4 @@ class Employee(Resource):
 
 class EmployeeAll(Resource):
     def get(self):
-return EmployeeModel.allEmployee()
+        return EmployeeModel.allEmployee()
