@@ -1,7 +1,7 @@
 import os
 from flask import Flask,jsonify
 from flask_restful import Api
-from resources.UserResource import UserLogin, UserRegistration, LogoutAccessToken, LogoutRefreshToken, TokenRefresh, AllUsers, SecretResource
+from resources.UserResource import UserLogin, UserRegistration, LogoutAccessToken, LogoutRefreshToken, TokenRefresh, AllUsers
 from flask_sqlalchemy import SQLAlchemy
 from flask_jwt_extended import JWTManager
 from models.user import RevokedTokenModel
@@ -36,7 +36,6 @@ api.add_resource(LogoutAccessToken,'/ATlogout')
 api.add_resource(LogoutRefreshToken,'/RTlogout')
 api.add_resource(TokenRefresh,'/refreshToken')
 api.add_resource(AllUsers,'/allusers')
-api.add_resource(SecretResource,'/SecretResource')
 api.add_resource(Employee,'/employee/<string:id>')
 api.add_resource(EmployeeAll,'/allEmployee')
 
