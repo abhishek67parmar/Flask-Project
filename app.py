@@ -43,7 +43,7 @@ def charge():
         description='Donation'
     )
 
-    return render_template('charge.html', amount=amount)
+    return render_template('Charge.html', amount=amount)
 
 
 # @app.before_first_request
